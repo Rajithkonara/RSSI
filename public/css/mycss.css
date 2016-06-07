@@ -1,0 +1,252 @@
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #404040;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    padding:100;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 10px;
+    line-height: 20px;
+
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+
+
+.side{
+
+}
+
+/*=======================================================*/
+.special-img
+{
+    position: relative;
+    top: -5px;
+    float: left;
+    left: -5px;
+}
+.profile-image  {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* NavBar */
+
+.navbar-custom {
+    background-color:#4d79ff;
+    color:#ffffff;
+
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+}
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color:transparent;
+}
+
+.navbar-custom .navbar-nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #ffffff;
+}
+
+.navbar-custom .navbar-brand {
+    color:#eeeeee;
+}
+.navbar-custom .navbar-toggle {
+    background-color:#eeeeee;
+}
+.navbar-custom .icon-bar {
+    background-color:#33aa33;
+}
+
+
+
+.options{
+    padding:3px;
+}
+
+
+.badge-notify{
+    background:red;
+    position:relative;
+    top: -20px;
+    left: -35px;
+}
+
+
+/*Calendar */
+#calendar{
+    width:225px;
+    margin:0 auto;
+    margin-top:-20px;
+    margin-bottom:2%;
+    border-radius:5px;
+    font-family: "Code Light";
+    text-align:center;
+    color:#000000;
+    margin-left: 10%;
+}
+
+#calendar h1{
+    background: #404040;
+    border-radius:5px 5px 0 0;
+    padding:20px;
+    font-size:140%;
+    font-weight:300;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#fff;
+    cursor:default;
+}
+
+#calendar table{
+    border-top:1px solid #ddd;
+    border-left:1px solid #ddd;
+    border-spacing:0;
+    border-radius:0 0 5px 5px;
+}
+
+#calendar td{
+    width:38px;
+    height:38px;
+    background:#eee;
+    border-right:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    padding:6px;
+    cursor:pointer;
+    transition:background .3s;
+    -webkit-transition:background .3s;
+}
+
+#calendar td:hover:not(.current){
+    background:#ddd;
+}
+
+#calendar .lastmonth,#calendar .nextmonth,#calendar .nextmonth ~ *{
+    background:#fff;
+    color:#999;
+}
+
+#calendar .currentA{
+    background:#CCCCCC;
+    font-weight:700;
+    color:#0077B9;
+}
+
+#calendar .currentO{
+    background:#CCCCCC;
+    font-weight:700;
+    color:#900002;
+}
+
+#calendar .hastask{
+    font-weight:700;
+    color: #FF0000;
+}
+#calendar .availableDay{
+    color: #0077B9;
+}
+#calendar .occupiedDay{
+    background: #ED4337;
+    color: #ffffff;
+}
+
+#calendar tr:last-of-type td:first-of-type{border-radius:0 0 0 5px;}
+#calendar tr:last-of-type td:last-of-type{border-radius:0 0 5px 0;}

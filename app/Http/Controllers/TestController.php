@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Answer;
 
+use App\Choice;
+use App\Question;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -15,8 +17,12 @@ class TestController extends Controller
     public function index()
     {
         $answers = Answer::all();
+        $questions =Question::all();
+        $choices = Choice::all();
         return view('test/test')->
-        with('answers', $answers);
+        with('answers', $answers)->
+        with('questions',$questions)->
+            with('choices',$choices);
     }
 
     public function test(Request $request)

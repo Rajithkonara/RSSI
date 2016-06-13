@@ -18,9 +18,13 @@ Route::get('/', function () {
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/test','TestController@index');
+Route::get('/test/{id}', [
+    'as' => 'test', 'uses' => 'TestController@index'
+]);
 
-Route::post('/test','TestController@test');
+Route::post('/answers/{paper}', [
+    'as' => 'answers', 'uses' => 'TestController@test'
+]);
 
 Route::auth();
 

@@ -1,0 +1,66 @@
+
+papers - id, title
+questions - paper_id, id, ans
+choices - question_id, label, id
+
+
+Db and Models
+
+/////////////////////////////////////////////////////////////////
+
+Paper Schema
+
+Schema::create('papers',function(Blueprint $table){
+            $table->increments('id');
+            $table->string('title');
+        });
+
+Paper Model
+
+class Paper extends Model
+{
+    protected $fillable = ['title'];
+
+     public function questions()
+        {
+               return $this->hasMany('App/Questions','paper_id');
+        }
+}
+
+///////////////////////////////////////////////////////////////////////////
+
+Questions Schema
+
+  Schema::create('questions',function (Blueprint $table){
+            $table->integer('paper_id');
+            $table->increments('id');
+            $table->string('ans');
+
+        });
+
+Questions Model
+
+class Question extends Model
+{
+    protected $fillable = ['ans'];
+
+
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+Choices Schema
+
+Schema::create('choices',function(Blueprint $table){
+             $table->increments('question_id');
+             $table->string('label');
+             $table->increments('id');
+        });
+
+
+Choices Model
+
+
+
+//Here i really don't understand Choices Model

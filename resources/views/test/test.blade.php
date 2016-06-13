@@ -212,9 +212,6 @@
                             <label class="radio-inline">
                                 <input type="radio" name="arr[3]" value="e">Option 3
                             </label>
-
-
-
                         </div><br>
 
                         <div class="form-group">

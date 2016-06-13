@@ -1,0 +1,7 @@
+papers - id, title
+questions - paper_id, id, ans
+choices - question_id, label, id
+
+Paper::find($id)->questions();
+
+@fo($q)

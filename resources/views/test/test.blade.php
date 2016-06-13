@@ -224,7 +224,25 @@
                     </form>
                     <!--End Answers-->
 
+<br><br><br>
+                    {{--For Loop--}}
 
+                    <h1>For testing the loop</h1>
+
+                @foreach($questions as $question)
+                        <div class="options" >
+                            <label class="radio-inline">
+                                {{ $question->id }}
+                            </label>
+                @foreach($choices as $choice)
+                            <label class="radio-inline">
+                                <input type="radio" name="{{ $choice->question_id  }}" value="{{ $choice->key }}">{{ $choice->label }}
+                            </label>
+                            @endforeach
+                            </div>
+                @endforeach
+
+                    {{--End Here--}}
 
                 </div>
                 <button type="button" class="btn btn-success"> Proceed </button>

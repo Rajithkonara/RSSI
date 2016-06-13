@@ -131,7 +131,7 @@
                                 1.
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="arr[0]" value="a">Option 1
+                                <input type="radio" name="arr[0]" value="">Option 1
                             </label>
                             <label class="radio-inline">
                                 <input type="radio" name="arr[0]" value="b">Option 2

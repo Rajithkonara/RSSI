@@ -10,6 +10,7 @@ class Choice extends Model
 
     public function question()
     {
+        //choice belong to one Question  one-one
         return $this->belongsTo(Question::class);
     }
 }

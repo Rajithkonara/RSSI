@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 use App\Answer;
 
-use App\Choice;
-use App\Question;
+use App\Paper;
+use App\Repositories\PaperRepository;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -12,42 +12,38 @@ use App\Http\Requests;
 
 class TestController extends Controller
 {
+    /**
+     * @var PaperRepository
+     */
+    protected $paper;
 
-
-    public function index()
+    /**
+     * TestController constructor.
+     * @param PaperRepository $paper
+     */
+    public function __construct(PaperRepository $paper)
     {
-        $answers = Answer::all();
-        $questions =Question::all();
-        $choices = Choice::all();
-        return view('test/test')->
-        with('answers', $answers)->
-        with('questions',$questions)->
-            with('choices',$choices);
+        $this->paper = $paper;
     }
 
-    public function test(Request $request)
+    public function index($id)
     {
+        $questions = $this->paper->getQuestionsbyPaperID($id);
+        return view('paper.test', compact('questions', 'id'));
+    }
 
-        $anwser = $request->input('arr');
-       // dd($anwser);
+    public function test(Request $request, $paper)
+    {
+        $questions = $this->paper->getQuestionsbyPaperID($paper);
+        $correct_ans_count = 0;
 
-        $answers = Answer::pluck('ans')->toArray();
-
-        //return Count
-        $matchingAnswers = Answer::whereIn('ans', $anwser)->count();
-        dd($matchingAnswers);
-
-        //BY milroy
-//        $answers = Answer::all();
-//        $correct_ans_count = 0;
-//
-//        foreach($answers as $answer) {
-//            $given_ans = $request->get($answer->qno);
-//            if ($given_ans === $answer->ans) {
-//                $correct_ans_count++;
-//            }
-//        }
-
-        ///
+        foreach($questions as $question) {
+            $given_ans = $request->get($question->id);
+            if ($given_ans === $question->correct_answer) {
+                $correct_ans_count++;
+            }
+        }
+        
+        return "No of correct answers {$correct_ans_count}";
     }
 }

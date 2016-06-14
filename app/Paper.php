@@ -10,6 +10,7 @@ class Paper extends Model
 
     public function questions()
     {
+        //One paper has many questions (one to many relationship)
         return $this->hasMany(Question::class);
     }
 }

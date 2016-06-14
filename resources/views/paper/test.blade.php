@@ -100,136 +100,38 @@
             <hr>
 
             <div class="row">
-                <div class="col-md-6" >
-
-                    <object data= width="550" height="500px; </object>
-
-                </div>
                 <div class="col-md-6" style="padding:35px; overflow-x: scroll; max-height:500px;  ">
                     <!--Answers-->
-                    <form method="post" action="{{ url('/test') }}">
+                    <form method="post" action="{{ route('answers', $id) }}">
                         {{ csrf_field() }}
 
-                      {{--@foreach($answers as $answer)--}}
-                        {{--<div class="options" >--}}
-                        {{--<label class="radio-inline">--}}
-                        {{--{{ $answer->id  }}--}}
-
-                        {{--</label>--}}
-                            {{--@foreach($answers as $ck)--}}
-                        {{--<label class="radio-inline">--}}
-                        {{--<input type="radio" name='ch[]' value="a">Option 1--}}
-                        {{--</label>--}}
-                            {{--@endforeach--}}
-                        {{--</div>--}}
-                        {{--<br>--}}
-                                {{--@endforeach--}}
-
+                        @foreach($questions as $question)
 
                         <div class="options" >
                             <label class="radio-inline">
-                                1.
+                                {{ $question->id }}.
                             </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="arr[0]" value="">Option 1
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="arr[0]" value="b">Option 2
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="arr[0]" value="c">Option 3
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="arr[0]" value="d">Option 3
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="arr[0]" value="e">Option 3
-                            </label>
+                            @foreach($question->choices as $choice)
+                                <label class="radio-inline">
+                                    <input type="radio" name="{{ $question->id }}" value="{{ $choice->key }}">{{ $choice->label }}
+                                </label>
+                            @endforeach
                         </div>
                         <br>
 
-
-                        <div class="options" >
-                            <label class="radio-inline">
-                                2.
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="arr[1]" value="a">Option 1
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="arr[1]" value="b">Option 2
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="arr[1]" value="c">Option 3
-                            </label>
-                         <label class="radio-inline">
-                                <input type="radio" name="arr[1]" value="d">Option 3
-                            </label>
-                         <label class="radio-inline">
-                                <input type="radio" name="arr[1]" value="e">Option 3
-                            </label>
-
-                        </div><br>
-
-
-                        <div class="options" >
-                            <label class="radio-inline">
-                                3.
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="arr[2]" value="a">Option 1
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="arr[2]" value="b">Option 2
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="arr[2]" value="c">Option 3
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="arr[2]" value="d">Option 3
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="arr[2]" value="e">Option 3
-                            </label>
-                        </div><br>
-
-                        <div class="options" >
-                            <label class="radio-inline">
-                                4.
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="arr[3]"  value="a">Option 1
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="arr[3]" value="b">Option 2
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="arr[3]" value="c">Option 3
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="arr[3]" value="d">Option 3
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="arr[3]" value="e">Option 3
-                            </label>
-                        </div><br>
+                        @endforeach
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                   Check
+                                    Check
                                 </button>
                             </div>
                         </div>
                     </form>
                     <!--End Answers-->
 
-
-
                 </div>
-                <button type="button" class="btn btn-success"> Proceed </button>
-                <button type="button" class="btn btn-warning"> Back </button>
-                <button type="button" class="btn btn-danger"> Cancel </button>
             </div>
 
 
@@ -248,14 +150,6 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
-
-<!-- Menu Toggle Script -->
-<script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-</script>
 
 </body>
 

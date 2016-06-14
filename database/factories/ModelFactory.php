@@ -19,3 +19,16 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Paper::class, function (Faker\Generator $faker) {
+    return [
+        'title' => $faker->sentence
+    ];
+});
+
+$factory->define(App\Question::class, function (Faker\Generator $faker) {
+    return [
+        'correct_answer' => $faker->randomElement(['a', 'b', 'c', 'd']),
+        'paper_id' => 1
+    ];
+});

@@ -135,7 +135,7 @@
 
                 </div>
             </div>
-
+            {{--Validations --}}
             @if (count($errors) > 0)
                 <div class="alert alert-danger">
                     <ul>
@@ -145,7 +145,7 @@
                     </ul>
                 </div>
             @endif
-
+            {{--End Here--}}
         </div>
     </div>
     <!-- page-content-wrapper -->

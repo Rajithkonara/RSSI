@@ -105,6 +105,8 @@
                     <form method="post" action="{{ route('answers', $id) }}">
                         {{ csrf_field() }}
 
+                        <input type="hidden" name="paper_id" value="{{ $id }}">
+
                         @foreach($questions as $question)
 
                         <div class="options" >
@@ -134,6 +136,15 @@
                 </div>
             </div>
 
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
         </div>
     </div>

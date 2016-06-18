@@ -1,16 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Answer;
 
-use App\Http\Requests\AnswerRequest;
-use App\Http\Requests\TestRequest;
-use App\Paper;
+use App\Http\Requests\AnswersRequest;
 use App\Repositories\PaperRepository;
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
-
 
 class TestController extends Controller
 {
@@ -34,7 +28,7 @@ class TestController extends Controller
         return view('paper.test', compact('questions', 'id'));
     }
 
-    public function test(Request $request, $paper)
+    public function test(AnswersRequest $request, $paper)
     {
         $questions = $this->paper->getQuestionsbyPaperID($paper);
         $correct_ans_count = 0;

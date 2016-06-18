@@ -35,7 +35,6 @@ class TestController extends Controller
     public function test(Request $request, $paper)
     {
         $questions = $this->paper->getQuestionsbyPaperID($paper);
-        
         $correct_ans_count = 0;
 
         foreach($questions as $question) {
@@ -45,6 +44,6 @@ class TestController extends Controller
             }
         }
         
-        return "No of correct answers {$co}";
+        return "No of correct answers {$correct_ans_count}";
     }
 }

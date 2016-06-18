@@ -10,11 +10,13 @@ class Question extends Model
 
     public function choices()
     {
+        //one questions maybe hasMany choices      //one - many
         return $this->hasMany(Choice::class);
     }
 
     public function paper()
     {
+        //One Question belong to one Paper   //one-one
         return $this->belongsTo(Paper::class);
     }
 }

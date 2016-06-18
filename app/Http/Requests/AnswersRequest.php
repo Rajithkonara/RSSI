@@ -2,10 +2,24 @@
 
 namespace App\Http\Requests;
 
-use App\Http\Requests\Request;
+use App\Repositories\PaperRepository;
 
 class AnswersRequest extends Request
 {
+    /**
+     * @var PaperRepository
+     */
+    private $paper;
+
+    /**
+     * AnswersRequest constructor.
+     * @param PaperRepository $paper
+     */
+    public function __construct(PaperRepository $paper)
+    {
+        $this->paper = $paper;
+    }
+
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -23,8 +37,14 @@ class AnswersRequest extends Request
      */
     public function rules()
     {
-        return [
-            //
-        ];
+        $rules = [];
+
+        $questions = $this->paper->getQuestionsbyPaperID($this->get('paper_id'));
+
+        foreach ($questions as $question) {
+            $rules[$question->id] = 'required';
+        }
+
+        return $rules;
     }
 }

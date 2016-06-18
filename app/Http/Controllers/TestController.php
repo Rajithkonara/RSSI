@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Answer;
 
+use App\Http\Requests\AnswerRequest;
+use App\Http\Requests\TestRequest;
 use App\Paper;
 use App\Repositories\PaperRepository;
 use Illuminate\Http\Request;

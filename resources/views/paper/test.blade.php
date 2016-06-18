@@ -113,7 +113,7 @@
                             </label>
                             @foreach($question->choices as $choice)
                                 <label class="radio-inline">
-                                    <input type="radio" name="{{ $question->id }}" value="{{ $choice->key }}">{{ $choice->label }}
+                                    <input type="radio" name="{{ $question->id }}" value="{{ $choice->key }}" required>{{ $choice->label }}
                                 </label>
                             @endforeach
                         </div>

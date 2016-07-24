@@ -39,7 +39,8 @@ class TestController extends Controller
                 $correct_ans_count++;
             }
         }
-        
+
+    //Bug #1 0 field required
         return "No of correct answers {$correct_ans_count}";
     }
 }

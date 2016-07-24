@@ -1,120 +1,93 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>DEV-EXAM</title>
+
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-    <script src="{{asset('js/jquery.js')}}"></script>
-    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Business Frontpage - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{asset('css/business-frontpage.css')}}" rel="stylesheet">
+    <link href="{{asset('css/template.css')}}" rel="stylesheet">
+    <link href="{{asset('css/navbar-fixed-top.css')}}" rel="stylesheet">
+
 </head>
 <body>
-<header>
-    <div class="row">
-        <div class="center">
-            <span>E-MCQ</span>
-        </div>
-</header>
-<!--FIXED NAV BAR START -->
-<nav class="navbar navbar-inverse navbar-fixed-top " role="navigation">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <div style="padding:7px;">
-                <a href="#menu-toggle" class="btn btn-default btn-sm" id="menu-toggle"> <span
-                            class="glyphicon glyphicon-eye-open"></span> </a>
-            </div>
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-nav">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            <a class="navbar-brand" href="#">
+                <div class="logo">
+                    <img src="img/prof.png" width="32" height="32" />
+                </div>
 
-        </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse" id="top-nav">
+            </a>
             <ul class="nav navbar-nav">
-                <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><i class="fa fa-suitcase"></i><span class="glyphicon glyphicon-envelope"> </span></a>
-                </li>
-                <li><a href="#"><i class="fa fa-suitcase"></i><span class="	glyphicon glyphicon-bell"> </span></a>
-                </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle profile-image" data-toggle="dropdown">
-                        <img src="http://placehold.it/30x30" class="img-circle special-img"> {{ Auth::user()->name }} <b
-                                class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#"><i class="fa fa-cog"></i> Account</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#"><i class="fa fa-sign-out"></i> Sign-out</a></li>
+                        <li><a href="inde">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+
                     </ul>
                 </li>
             </ul>
+
         </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+
+                @if(Auth::guest())
+                </li><li>
+                    <a href="{{url('/login')}}">SignIn</a>
+                </li>
+                @else
+                <li class="dropdown">
+
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        {{Auth::user()->name}} <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="inde">Dashboard</a></li>
+                        <li><a href="#">Proile</a></li>
+                        <li><a href="#">Account</a></li>
+                        <li><a href="{{url('/logout')}}">SignOut</a></li>
+
+                    </ul>
+                </li>
+
+                @endif
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
     </div>
+    <!-- /.container -->
 </nav>
 
-<hr>
-<div class="row" id="second_row">
-    <h1>What can you expect from Us</h1>
-
-    <div class="row">
-
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
-
-    </div>
-</div>
-
-
-<hr>
-<div class="row" id="third_row">
-    <h1>Successful Stories</h1>
-
-    <div class="row">
-
-        <div class="col-md-4">
-            <img src="img/student.png" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
-
-            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-
-        <div class="col-md-4">
-            <img src="img/student.png" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
-
-            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-
-        <div class="col-md-4">
-            <img src="img/student.png" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
-
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-
-
-    </div>
-</div>
-<hr>
-
-</body>
-</html>

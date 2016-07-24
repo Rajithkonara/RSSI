@@ -1,0 +1,11 @@
+
+
+.navbar-fixed-top .nav {
+    padding: 15px 0;
+}
+
+ /*-- change navbar dropdown color --*/
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+      background-color: #3344ff;
+      color: #ffffff;
+  }

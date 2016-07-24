@@ -39,11 +39,11 @@ class AnswersRequest extends Request
     {
         $rules = [];
 
-        $questions = $this->paper->getQuestionsbyPaperID($this->get('paper_id'));
-
-        foreach ($questions as $question) {
-            $rules[$question->id] = 'required';
-        }
+//        $questions = $this->paper->getQuestionsbyPaperID($this->get('paper_id'));
+//
+//        foreach ($questions as $question) {
+//            $rules[$question->id] = 'required';
+//        }
 
         return $rules;
     }

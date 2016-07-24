@@ -1,0 +1,689 @@
+@charset "utf-8";
+.afterBody {
+	font-family: "FS Lola";
+}
+.Header {
+	font-family: "FS Lola";
+}
+.mainHeading {
+}
+.logo {
+	padding-top: 5px;
+	width: 100px;
+}
+.mainH1 {
+	font-size: 37px;
+	font-style: normal;
+	font-weight: 500;
+	font-family: "FS Lola";
+	padding-bottom: 5px;
+	text-align: center;
+}
+
+ul.topnav {
+	list-style-type: none;
+	padding-right: 40px;
+	padding-left: 40px;
+}
+
+/* Float the list items side by side */
+ul.topnav li {
+	float: left;
+	font-style: normal;
+	margin: 0px;
+	padding: 0px;
+	font-weight: 400;
+	z-index: 0;
+}
+
+/* Style the links inside the list items */
+.navBarItem {
+	display: inline-block;
+	color: #000000;
+	text-align: center;
+	padding-top: 20px;
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-bottom: 20px;
+	text-decoration: none;
+	transition: 0.3s;
+	font-size: 20px;
+}
+
+/* Change background color of links on hover */
+.navBarItem:hover {
+	color: rgba(0,0,0,1.00);
+	text-shadow: 0px 0px 2px rgba(190,190,190,1.00);
+	text-decoration: none;
+	z-index: 0;
+}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+	transition: all 2s ease 2s, visibility 5s;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+.myNavBarDiv {
+	padding-bottom: 5px;
+
+
+}
+.text {
+	color: rgba(255,255,255,1.00);
+	text-shadow: 0px 0px 2px rgba(103,103,103,1.00);
+}
+.text1 {
+	font-size: 18px;
+	text-align: center;
+	font-family: "FS Lola";
+	text-shadow: 0px 0px 8px rgba(0,0,0,1.00);
+}
+.text2 {
+	text-align: center;
+	font-size: 50px;
+	font-family: "FS Lola";
+	color: rgba(255,255,255,1.00);
+	text-shadow: 0px 0px 8px rgba(55,55,55,1.00);
+	text-transform: uppercase;
+	margin-left: 130px;
+	margin-right: 130px;
+	background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0.00) 0%,rgba(0,0,0,0.46) 17.10%,rgba(0,0,0,0.65) 29.53%,rgba(0,0,0,0.90) 38.34%,rgba(0,0,0,0.92) 57.51%,rgba(0,0,0,0.64) 69.43%,rgba(0,0,0,0.50) 84.97%,rgba(255,255,255,0.00) 100%);
+	background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0.00) 0%,rgba(0,0,0,0.46) 17.10%,rgba(0,0,0,0.65) 29.53%,rgba(0,0,0,0.90) 38.34%,rgba(0,0,0,0.92) 57.51%,rgba(0,0,0,0.64) 69.43%,rgba(0,0,0,0.50) 84.97%,rgba(255,255,255,0.00) 100%);
+	background-image: -o-linear-gradient(0deg,rgba(255,255,255,0.00) 0%,rgba(0,0,0,0.46) 17.10%,rgba(0,0,0,0.65) 29.53%,rgba(0,0,0,0.90) 38.34%,rgba(0,0,0,0.92) 57.51%,rgba(0,0,0,0.64) 69.43%,rgba(0,0,0,0.50) 84.97%,rgba(255,255,255,0.00) 100%);
+	background-image: linear-gradient(90deg,rgba(255,255,255,0.00) 0%,rgba(0,0,0,0.46) 17.10%,rgba(0,0,0,0.65) 29.53%,rgba(0,0,0,0.90) 38.34%,rgba(0,0,0,0.92) 57.51%,rgba(0,0,0,0.64) 69.43%,rgba(0,0,0,0.50) 84.97%,rgba(255,255,255,0.00) 100%);
+}
+.footer {
+	font-family: "FS Lola";
+	padding-left: 65px;
+	padding-right: 65px;
+	border-top: thin solid rgba(131,131,131,1.00);
+	background-color: rgba(228,228,228,1.00);
+}
+.FooterContent {
+	padding-top: 16px;
+	padding-bottom: 16px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.FooterContentHeading {
+	text-align: left;
+	margin-left: 47px;
+	font-weight: 600;
+	font-family: "FS Lola";
+}
+.FContentListItems {
+	margin-top: 5px;
+	margin-bottom: 2px;
+	color: rgba(0,0,0,1.00);
+}
+.FContentList {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.FcontentListAhref {
+}
+.extra {
+	height: 150px;
+}
+.footerco {
+}
+.SocialIconAHref {
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-left: 4px;
+	margin-right: 4px;
+	transition: all .23s ease;
+}
+.SocialIconAHref:hover {
+	transform: scale(1.1);
+
+}
+.FooterUnderneath {
+	padding-top: 60px;
+
+}
+.DevelopedBy {
+	font-size: 10px;
+	margin-top: 0px;
+	font-family: sans-serif;
+	color: rgba(0,26,129,1.00);
+	cursor: pointer;
+}
+.CopyRight {
+	text-align: center;
+	padding-top: 15px;
+	border-top: 2px solid rgba(142,142,142,1.00);
+
+}
+.FooterNavDiv {
+	font-family: "FS Lola";
+	font-size: 18px;
+	text-align: center;
+	border-right: thin solid rgba(92,92,92,1.00);
+	margin-top: 10px;
+}
+.FOoterNavAHref {
+	color: rgba(0,0,0,1.00);
+}
+.LastDivForInstitutes {
+	padding-top: 13px;
+}
+.MainNewsImg {
+	float: left;
+	max-width: 75%;
+	padding: 15px;
+	overflow-y: hidden;
+}
+.mainNews {
+	padding-top: 13px;
+	padding-left: 13px;
+	padding-right: 13px;
+	padding-bottom: 13px;
+	border-right: thin solid rgba(197,197,197,1.00);
+}
+.NewsHeading {
+	font-weight: 500;
+	color: rgba(35,62,164,1.00);
+	text-align: center;
+	font-size: 20px;
+	padding-top: 9px;
+	padding-bottom: 15px;
+}
+.NewsCOntent {
+	text-align: justify;
+	font-size: 16px;
+}
+.ReadMoreNews {
+}
+.SubNewsCol {
+	padding: 15px;
+	border-right: thin solid rgba(197,197,197,1.00);
+}
+.newsRow {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.SubHeadingNews {
+	text-align: left;
+	font-size: 50px;
+	font-weight: 500;
+	color: rgba(0,0,0,1.00);
+	padding-left: 25px;
+
+}
+.carousalNews{
+	height: 300px;
+
+
+}
+	
+.totlNewsCarousal {
+	margin-top: 25px;
+}
+.InstituteBox {
+	margin-top: 20px;
+	margin-right: 10px;
+	padding: 10px;
+	-webkit-box-shadow: 0px 0px 23px 3px rgba(0,0,0,1.00);
+	box-shadow: 0px 0px 23px 3px rgba(0,0,0,1.00);
+	margin-left: 10px;
+	background-color: rgba(255,255,255,0.27);
+	height: 2in;
+	font-size: large;
+	
+	
+	transition: all .23s ease;
+
+
+}
+.InstituteBox:hover {
+	transform: scale(1.05);
+}
+.InsitituteLogo {
+	width: 100px;
+	height: 100px;
+}
+.instituteName {
+	text-align: center;
+	font-size: 15px;
+	color: rgba(255,255,255,1.00);
+}
+.InstituteBoxRow {
+
+}
+.instituteRow {
+}
+.fullInstituteRow {
+	padding-bottom: 40px;
+	background-color: rgba(0,0,0,1.00);
+	background-image: url(images/rg.jpg);
+}
+@media screen and (max-width:680px){
+	.fullInstituteRow {
+	padding-bottom: 40px;
+	background-color: rgba(0,0,0,1.00);
+	background-image: none;
+}
+	
+}
+.institutetext {
+	color: rgba(255,255,255,1.00);
+}
+.topright {
+	border-right: thin none rgba(255,255,255,1.00);
+}
+.bottemright {
+	border-right: thin none rgba(255,255,255,1.00);
+}
+.subNewsRow {
+	border-top: thin solid rgba(197,197,197,1.00);
+}
+input[type=email] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    
+}
+
+
+
+.EmailRow {
+	padding-left: 20px;
+
+
+}
+.SubscribeBtn {
+	font-family: "FS Lola";
+	background-color: rgba(88,164,255,1.00);
+	font-size: 20px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	color: rgba(255,255,255,1.00);
+}
+.buttonareaRow {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.SubscribeSIdeImg {
+	width: 100%;
+	height: 100%;
+}
+
+input[type=text] {
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	background-color: white;
+	background-image: url('searchicon.png');
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	width: 90%;
+    
+}
+
+
+
+.SerachBox {
+	max-width: 50%;
+}
+.searchCourse {
+	color: rgba(255,255,255,1.00);
+	font-size: 25px;
+}
+
+
+/*imported from old design for event row */
+
+.TopEventRow {
+	margin: 12px;
+	padding: 10px;
+	height: 33.3333%;
+	left: 15%;
+
+}
+.LatestEventCircle {
+	border-radius: 50%;
+	background-color: hsla(359,100%,39%,1.00);
+	border: thin solid hsla(359,100%,50%,1.00);
+	width: 1.5in;
+	height: 1.5in;
+	margin-left: 10px;
+	margin-right: 10px;
+	float: right;
+	color: hsla(0,0%,100%,1.00);
+	font-family: droid-sans;
+	font-style: normal;
+	font-weight: 400;
+	
+	
+	
+	transition: all .23s ease;
+}
+.LatestEventCircle:hover {
+	transform: scale(1.1);
+}
+
+.MainEventDate {
+	margin-top: 16%;
+	color: #000000;
+	font-family: averia-sans-libre;
+	font-style: normal;
+	font-weight: 400;
+	font-size: large;
+
+}
+.EventsRow {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	background-color: #F3F3F3;
+	text-decoration: blink;
+	text-emphasis-color: white;
+	color: hsla(0,0%,0%,1.00);
+	padding-bottom: 30px;
+}
+.MainEventDetails {
+	color: hsla(0,0%,45%,1.00);
+	font-family: droid-sans;
+	font-style: normal;
+	text-align: left;
+	text-shadow: 0px 0px 0px hsla(0,0%,0%,1.00);
+	font-size: 18px;
+}
+
+.EventCircleSmall {
+	border-radius: 50%;
+	background-color: hsla(0,0%,70%,0.00);
+	border: thin solid hsla(359,100%,39%,1.00);
+	width: 0.75in;
+	height: 0.75in;
+	margin-left: 10px;
+	margin-right: 10px;
+	float: right;
+	font-family: droid-sans;
+	font-style: normal;
+	font-weight: 700;
+	text-align: center;
+}
+.SmallEventRow {
+	margin: 15px;
+	min-height: 100px;
+}
+.EventsButton {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-left: 20%;
+	padding-right: 20%;
+	letter-spacing: 0px;
+	font-size: 18px;
+	color:#FFFFFF;
+	font-family: droid-sans;
+	font-style: normal;
+	font-weight: 400;
+}
+.mainMainDate {
+	font-size: 26px;
+	color: #FFFFFF;
+}
+.MainEventName {
+	color: #000000;
+	font-style: normal;
+	text-align: left;
+	font-size: 25px;
+}
+.SubEventName {
+	color: #000000;
+	font-size: 20px;
+	font-weight: 600;
+}
+.SubEventVenue {
+	font-style: italic;
+	font-size: 15px;
+	color: rgba(147,147,147,1.00);
+}
+.mainMainDate {
+	color: #FFFFFF;
+	font-size: 32px;
+}
+/*end of import */
+.rowinstitutebottem {
+
+
+}
+.videoRow {
+	padding: 10px;
+	margin: 5px;
+}
+.iframeVideo{
+	max-width: 100%;
+	max-height: 100%;
+}
+.videoheading {
+	font-size: 15px;
+	text-align: center;
+}
+.ContactImg {
+	width: 150px;
+	height: 150px;
+}
+.COntactHeading {
+	text-align: center;
+	color: rgba(255,255,255,1.00);
+}
+.contactDIv {
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	margin-right: 15px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+	background-color: rgba(237,237,237,0.24);
+	padding-top: 20px;
+	margin-top: 60px;
+}
+.ContactName {
+	text-align: center;
+	color: rgba(255,255,255,1.00);
+}
+.contactahref {
+	text-decoration: none;
+}
+.contactUsRow {
+	background-image: url(images/ContactUs.jpg);
+	padding-bottom: 40px;
+}
+.COntactUsHeading {
+	color: rgba(255,255,255,1.00);
+}
+.contactItem {
+	padding-left: 150px;
+	padding-right: 150px;
+}
+.ContactDetails {
+	color: rgba(255,255,255,1.00);
+	font-size: 15px;
+	text-align: center;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 20px;
+}
+.OurAddress {
+	font-size: 25px;
+	text-align: center;
+}
+.map {
+	padding: 15px;
+
+}
+.rowAddress {
+
+}
+.AddressHotLine {
+	text-align: center;
+}
+.Minister {
+	background-color: rgba(255,255,255,0.22);
+
+}
+.newsContentRow {
+}
+.NewsDate {
+}
+
+@media handheld{
+}
+.hidden-xs {
+}
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	background-color: rgba(187,187,187,1.00);
+	min-width: 350px;
+}
+
+.dropdown-content a {
+	color: black;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {
+	z-index: 3;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+	z-index: 4;
+	visibility: visible;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+.dropdownItem{
+	color: rgba(0,0,0,1.00);
+	background-color: rgba(255,255,255,1.00);
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 100%;
+	font-size: 100%;
+	text-align: justify;
+	white-space: pre-line;
+	}
+.dropdownItem:hover{
+	color: rgba(255,255,255,1.00);
+	background-color: rgba(138,138,138,1.00);
+}
+.liDropdownItem {
+	z-index: 0;
+}
+.ahrefDropdown{
+	padding: 0px;
+	margin: 0px;
+	z-index: 3;
+	
+}
+.ahrefDropdown:hover{
+	z-index: 4;
+}
+.navBarItem {
+}
+.MobileMenuIcon {
+}
+.mainImg {
+	height: 100%;
+	width: 100%;
+}
+.MoreContactsAhref {
+}
+.MoreContactsAhref:hover {
+	text-decoration: none;
+}
+.PageHeadingRow {
+	background-color: rgba(204,204,204,1.00);
+}
+.PageHeading {
+	color: rgba(0,0,0,1.00);
+	margin-left: 40px;
+	font-size: 55px;
+	text-align: left;
+}
+.thisisaddress {
+	text-align: center;
+}
+.SocialIconFooter {
+
+	transition: all .23s ease;
+}
+.SocialIconFooter:hover {
+	transform: scale(1.045);
+	text-decoration: none;
+}
+#min {
+}
+#address {
+}
+.SocialFooter {
+
+	transition: all 0.75s ease;
+}
+.SocialFooter:hover {
+	transform: scale(1.1);
+	text-decoration: none;
+}
+
+.carousel {
+  position: relative;
+  width: 750px;
+}

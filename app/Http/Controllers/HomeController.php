@@ -32,7 +32,7 @@ class HomeController extends Controller
     public function getPapers($id)
     {
         $questions = $this->paper->getQuestionsbyPaperID($id);
-        dd($questions);
+//        dd($questions);
         return view('site.bios', compact('questions', 'id'));
     }
 

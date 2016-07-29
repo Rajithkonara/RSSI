@@ -29,6 +29,6 @@ class PaperRepository
 
     public function getQuestionsbyPaperID($id)
     {
-        return $this->paper->find($id)->with('questions.choices')->first()->questions;
+        return $this->paper->where('id',$id)->with('questions.choices')->first()->questions;
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Repositories\PaperRepository;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -10,11 +11,12 @@ class HomeController extends Controller
     /**
      * Create a new controller instance.
      *
-     * @return void
+     * @param PaperRepository $paper
      */
-    public function __construct()
+    public function __construct(PaperRepository $paper)
     {
-        $this->middleware('auth');
+        $this->paper = $paper;
+      //  $this->middleware('auth');
     }
 
     /**
@@ -26,4 +28,21 @@ class HomeController extends Controller
     {
         return view('site.home');
     }
+
+    public function getPapers($id)
+    {
+        $questions = $this->paper->getQuestionsbyPaperID($id);
+        dd($questions);
+        return view('site.bios', compact('questions', 'id'));
+    }
+
+
+
+    public function getBioPapers()
+    {
+        $bio = $this->paper->getBioPapersByName();
+//        dd($bio);
+        return view('site.bio',compact('bio'));
+    }
+
 }

@@ -26,7 +26,8 @@
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -34,14 +35,15 @@
             </button>
             <a class="navbar-brand" href="#">
                 <div class="logo">
-                    <img src="img/prof.png" width="32" height="32" />
+                    <img src="img/prof.png" width="32" height="32"/>
                 </div>
 
             </a>
             <ul class="nav navbar-nav">
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Courses <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="inde">Action</a></li>
                         <li><a href="#">Another action</a></li>
@@ -65,23 +67,25 @@
                 <li>
                     <a href="#">Contact</a>
 
-                @if(Auth::guest())
-                </li><li>
-                    <a href="{{url('/login')}}">SignIn</a>
+                    @if(Auth::guest())
+                </li>
+                <li>
+                    <a href="{{url('/login')}}">Sign In</a>
                 </li>
                 @else
-                <li class="dropdown">
+                    <li class="dropdown">
 
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        {{Auth::user()->name}} <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="inde">Dashboard</a></li>
-                        <li><a href="#">Proile</a></li>
-                        <li><a href="#">Account</a></li>
-                        <li><a href="{{url('/logout')}}">SignOut</a></li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">
+                            {{Auth::user()->name}} <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="inde">Dashboard</a></li>
+                            <li><a href="#">Proile</a></li>
+                            <li><a href="#">Account</a></li>
+                            <li><a href="{{url('/logout')}}">SignOut</a></li>
 
-                    </ul>
-                </li>
+                        </ul>
+                    </li>
 
                 @endif
             </ul>

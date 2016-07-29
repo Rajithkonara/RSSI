@@ -30,7 +30,7 @@
             </button>
         </div>
         <div class="col-sm-3">
-            <a href="{{url('/papers')}}" class="btn btn-danger" style="width:100%;padding:20px;" >
+            <a href="{{url('/test/1')}}" class="btn btn-danger" style="width:100%;padding:20px;" >
                 <h4><b>Answer Questions <span class="glyphicon glyphicon-pencil"></span> </b></h4>
             </a>
         </div>
@@ -41,159 +41,38 @@
         </div>
     </div>
     <hr>
+
 <div class="hero">
+
+
     <div class="row">
-
-        <h1 class="tagline">Our Partners</h1>
         <div class="col-sm-3">
-            <div class="hovereffect">
-                <img class="img-responsive" src="img/te.gif" alt="">
-                <div class="overlay">
-                    <h2>Dr Amith Pussalla</h2>
-                    <h5 style="color:#fff;">Lorem Ipsum.Lorem Ipsum</h5>
-                    <a class="info" href="#">Get My Exams</a>
-                </div>
-            </div>
+            <a href="{{url('/biology')}}" class="btn btn-primary" style="width:100%;padding:20px;" >
+                <h4><b>Biology <span class="glyphicon glyphicon-pencil"></span> </b></h4>
+            </a>
         </div>
-
         <div class="col-sm-3">
-            <div class="hovereffect">
-                <img class="img-responsive" src="img/te.gif" alt="">
-                <div class="overlay">
-                    <h2>Dr Amith Pussalla</h2>
-                    <h5 style="color:#fff;">Lorem Ipsum.Lorem Ipsum</h5>
-                    <a class="info" href="#">Get My Exams</a>
-                </div>
-            </div>
+            <button class="btn btn-primary" style="width:100%;padding:20px;" >
+                <h4><b> Chemistry <span class="glyphicon glyphicon-log-in"></span> </b></h4>
+            </button>
         </div>
-
-
         <div class="col-sm-3">
-            <div class="hovereffect">
-                <img class="img-responsive" src="img/te.gif" alt="">
-                <div class="overlay">
-                    <h2>Dr Amith Pussalla</h2>
-                    <h5 style="color:#fff;">Lorem Ipsum.Lorem Ipsum</h5>
-                    <a class="info" href="#">Get My Exams</a>
-                </div>
-            </div>
+            <a href="{{url('/papers')}}" class="btn btn-primary" style="width:100%;padding:20px;" >
+                <h4><b>Physics <span class="glyphicon glyphicon-pencil"></span> </b></h4>
+            </a>
         </div>
-
         <div class="col-sm-3">
-            <div class="hovereffect">
-                <img class="img-responsive" src="img/te.gif" alt="">
-                <div class="overlay">
-                    <h2>Dr Amith Pussalla</h2>
-                    <h5 style="color:#fff;">Lorem Ipsum.Lorem Ipsum</h5>
-                    <a class="info" href="#">Get My Exams</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-<!-- /.row -->
-<br>
-<div class="row">
-    <div class="col-sm-3">
-        <div class="hovereffect">
-            <img class="img-responsive" src="img/te.gif" alt="">
-            <div class="overlay">
-                <h2>Dr Amith Pussalla</h2>
-                <h5 style="color:#fff;">Lorem Ipsum.Lorem Ipsum</h5>
-                <a class="info" href="#">Get My Exams</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-3">
-        <div class="hovereffect">
-            <img class="img-responsive" src="img/te.gif" alt="">
-            <div class="overlay">
-                <h2>Dr Amith Pussalla</h2>
-                <h5 style="color:#fff;">Lorem Ipsum.Lorem Ipsum</h5>
-                <a class="info" href="#">Get My Exams</a>
-            </div>
+            <button class="btn btn-primary" style="width:100%;padding:20px;" >
+                <h4><b>Combine Maths <span class="glyphicon glyphicon-flag"></span></b></h4>
+            </button>
         </div>
     </div>
 
 
-    <div class="col-sm-3">
-        <div class="hovereffect">
-            <img class="img-responsive" src="img/te.gif" alt="">
-            <div class="overlay">
-                <h2>Dr Amith Pussalla</h2>
-                <h5 style="color:#fff;">Lorem Ipsum.Lorem Ipsum</h5>
-                <a class="info" href="#">Get My Exams</a>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="col-sm-3">
-        <div class="hovereffect">
-            <img class="img-responsive" src="img/te.gif" alt="">
-            <div class="overlay">
-                <h2>Dr Amith Pussalla</h2>
-                <h5 style="color:#fff;">Lorem Ipsum.Lorem Ipsum</h5>
-                <a class="info" href="#">Get My Exams</a>
-            </div>
-        </div>
-    </div>
 
 </div>
-<!-- /.row -->
-<br>
-<div class="row">
-    <div class="col-sm-3">
-        <div class="hovereffect">
-            <img class="img-responsive" src="img/te.gif" alt="">
-            <div class="overlay">
-                <h2>Dr Amith Pussalla</h2>
-                <h5 style="color:#fff;">Lorem Ipsum.Lorem Ipsum</h5>
-                <a class="info" href="#">Get My Exams</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-3">
-        <div class="hovereffect">
-            <img class="img-responsive" src="img/te.gif" alt="">
-            <div class="overlay">
-                <h2>Dr Amith Pussalla</h2>
-                <h5 style="color:#fff;">Lorem Ipsum.Lorem Ipsum</h5>
-                <a class="info" href="#">Get My Exams</a>
-            </div>
-        </div>
-    </div>
 
 
-    <div class="col-sm-3">
-        <div class="hovereffect">
-            <img class="img-responsive" src="img/te.gif" alt="">
-            <div class="overlay">
-                <h2>Dr Amith Pussalla</h2>
-                <h5 style="color:#fff;">Lorem Ipsum.Lorem Ipsum</h5>
-                <a class="info" href="#">Get My Exams</a>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="col-sm-3">
-        <div class="hovereffect">
-            <img class="img-responsive" src="img/te.gif" alt="">
-            <div class="overlay">
-                <h2>Dr Amith Pussalla</h2>
-                <h5 style="color:#fff;">Lorem Ipsum.Lorem Ipsum</h5>
-                <a class="info" href="#">Get My Exams</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- /.row -->
-<br>
 <hr>
 
 <!-- Footer -->

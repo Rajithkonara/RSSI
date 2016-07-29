@@ -1,5 +1,6 @@
 <?php
 
+//referece : http://www.isiwaranena.com/
 
 Route::get('/', function () {
     return view('site.home');
@@ -8,6 +9,7 @@ Route::get('/', function () {
 Route::get('/home', 'HomeController@index');
 
 Route::get('/test/{id}', [
+//    'middleware' => 'auth',
     'as' => 'test', 'uses' => 'TestController@index'
 ]);
 
@@ -22,5 +24,10 @@ Route::get('/papers', [
 ]);
 
 
+
+//////////////papers//////////
+Route::get('/biology','HomeController@getBioPapers');
+
+Route::get('/biology/{id}','HomeController@getPapers');
 
 

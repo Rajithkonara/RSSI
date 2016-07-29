@@ -21,6 +21,12 @@ class PaperRepository
         $this->paper = $paper;
     }
 
+    public function getBioPapersByName()
+    {
+        return $this->paper->all()->where('name','Biology');
+    }
+
+
     public function getQuestionsbyPaperID($id)
     {
         return $this->paper->find($id)->with('questions.choices')->first()->questions;
